@@ -1,0 +1,13 @@
+{
+  "name": "lexcms",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "dustjs": "~0.3.0"
+  }
+}
