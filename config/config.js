@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'lexcms'
     },
-    port: 3000,
+    port: process.env.port || 3000,
     db: 'mongodb://admin:admin@ds049084.mongolab.com:49084/lexcms'
   },
 
@@ -17,7 +17,7 @@ var config = {
     app: {
       name: 'lexcms'
     },
-    port: 3000,
+    port: process.env.port || 3000,
     db: 'mongodb://admin:admin@ds049084.mongolab.com:49084/lexcms'
   },
 
@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'lexcms'
     },
-    port: 3000,
+    port: process.env.port || 3000,
     db: 'mongodb://admin:admin@ds049084.mongolab.com:49084/lexcms'
   }
 };
