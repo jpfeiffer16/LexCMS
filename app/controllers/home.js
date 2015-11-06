@@ -1,18 +1,27 @@
 var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+  LayoutProvider = require('../modules/LayoutProvider.js');
 
 module.exports = function (app) {
   app.use('/', router);
 };
 
 router.get('/', function (req, res, next) {
-  Article.find(function (err, articles) {
-    if (err) return next(err);
-    res.render('index', {
-      title: 'Generator-Express MVC',
-      articles: articles
-    });
+  res.render('index', {
+    title: 'Layout Tester'
+  });
+});
+
+router.post('/', function (req, res, next) {
+  var title = req.body.title,
+      code = req.body.code;
+      
+  LayoutProvider.saveLayout(title, code, function(err, id) {
+    if (!err) {
+      res.render('success', { id: id.toString() });
+    } else {
+      res.render('fail', null);
+    }
   });
 });

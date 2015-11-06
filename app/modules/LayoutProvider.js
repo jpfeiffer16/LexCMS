@@ -55,6 +55,7 @@ module.exports = (function() {
 	
 	
 	return {
-		getLayout: getLayout
+		getLayout: getLayout,
+		saveLayout: saveLayout
 	};
 })();

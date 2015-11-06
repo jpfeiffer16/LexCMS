@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var LayoutShcema = new Schema({
-  _id: mongoose.Types.ObjectId,
+  _id: Schema.ObjectId,
   title: String,
   code: String
 });
