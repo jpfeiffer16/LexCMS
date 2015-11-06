@@ -6,9 +6,9 @@ var dust = require('dustjs-linkedin');
 module.exports = (function() {
 	
 	function render(code, callback) {
-		var compiledCode = dust.compile(code, 'render');
-		dust.render('render', { title: 'Test' }, function(err, output) {
-			if (err == '') {
+		// var compiledCode = dust.compile(code, 'render');
+		dust.renderSource(code, { title: 'Test 3' }, function(err, output) {
+			if (!err) {
 				if (typeof(callback) == 'function') {
 					callback(output);
 				}
