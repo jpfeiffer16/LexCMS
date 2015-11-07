@@ -1,5 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
 	"editor.insertSpaces": true,
-	"editor.tabSize": 2
+	"editor.tabSize": 2,
+  "editor.wrappingColumn": 100
 }
